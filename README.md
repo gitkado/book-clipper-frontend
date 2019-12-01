@@ -5,9 +5,13 @@
 
 ## Framework
 - Nuxt.js
+- Vuetify
 
 ## Run
 
 ```bash
 docker-compose up
 ```
+
+## URL
+- localhost:8080
