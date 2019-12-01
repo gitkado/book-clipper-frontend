@@ -1,8 +1,20 @@
 <template>
-    <div>
-        <h1>MyBook-Add</h1>
-        <nuxt-link to="/books" >Back</nuxt-link>
-    </div>
+  <div>
+    <h1>{{title}}</h1>
+    <nuxt-link v-bind:to="back.to" >{{back.title}}</nuxt-link>
+  </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data () {
+    return {
+      title: "MyBook-Add",
+      back: {
+        title: "Back",
+        to: "/books"
+      }
+    }
+  }
+}
+</script>
