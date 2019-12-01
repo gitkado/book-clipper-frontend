@@ -7,6 +7,24 @@
       fixed
       app
     >
+
+      <v-toolbar flat>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile avatar>
+              <v-list-tile-avatar>
+                <v-icon large>{{user.icon}}</v-icon>
+              </v-list-tile-avatar>
+              <v-list-tile-content>
+                <v-list-tile-title class="title">
+                  {{user.name}}
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -73,6 +91,10 @@ export default {
       title: {
         title: 'BookClipper',
         to: '/'
+      },
+      user: {
+        icon: 'mdi-account-circle',
+        name: 'None'
       }
     }
   }

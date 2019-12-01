@@ -30,6 +30,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // TODO: ERROR in ./plugins/vee-validate.js
+    // { src: '@/plugins/vee-validate', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -71,10 +73,14 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    // TODO: ERROR in ./plugins/vee-validate.js
+    // transpile: [
+    //   'vee-validate/dist/rules'
+    // ],
   },
   /*
-  ** Server configuration - add
+  ** Server configuration
   */
   server: {
     // default: 3000

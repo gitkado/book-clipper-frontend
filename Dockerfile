@@ -9,6 +9,7 @@ ADD ./start.sh /
 
 RUN npm install -g yarn && \
     yarn global add @vue/cli && \
+    yarn global add vee-validate && \
     chmod +x /start.sh && \
     yarn install
 
