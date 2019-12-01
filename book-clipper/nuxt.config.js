@@ -72,5 +72,14 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  /*
+  ** Server configuration - add
+  */
+  server: {
+    // default: 3000
+    port: 3000,
+    // default: localhost
+    host: '0.0.0.0'
   }
 }
