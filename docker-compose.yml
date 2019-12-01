@@ -1,0 +1,11 @@
+version: '3'
+services:
+  front:
+    build: .
+    # tty: true
+    volumes:
+      - "$PWD:/opt/app"
+    ports:
+      - "8080:3000"
+    # command: "/bin/sh"
+    # command: "yarn start"
