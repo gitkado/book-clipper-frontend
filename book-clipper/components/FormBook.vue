@@ -1,8 +1,7 @@
 <template>
-  <validation-observer ref="observer" v-slot="{ handleSubmit, valid }">
+  <validation-observer ref="observer" v-slot="{ handleSubmit, invalid }">
     <form @submit.prevent="handleSubmit(onSubmit)" @reset.prevent="onReset">
-
-      <validation-provider name="Title" rules="required|max:20" v-slot="{ valid, errors }">
+      <validation-provider name="Title" rules="required|max:20" v-slot="{ invalid, errors }">
         <v-text-field
           v-model="title"
           :error-messages="errors"
@@ -12,7 +11,7 @@
         ></v-text-field>
       </validation-provider>
 
-      <validation-provider name="URL" v-slot="{ valid, errors }">
+      <validation-provider name="URL" v-slot="{ invalid, errors }">
         <v-text-field
           v-model="url"
           label="URL"
@@ -20,7 +19,7 @@
         ></v-text-field>
       </validation-provider>
 
-      <validation-provider name="Tag" v-slot="{ valid, errors }">
+      <validation-provider name="Tag" v-slot="{ invalid, errors }">
         <v-combobox
           v-model="tag"
           :items="tag_items"
@@ -43,15 +42,13 @@
       </validation-provider>
 
       <v-container fluid>
-        <v-btn :disabled="!valid" type="submit" class="ma-2" tile outlined color="success">
-          <v-icon left>mdi-pencil</v-icon> Create
+        <v-btn :disabled="invalid" type="submit" class="ma-2" tile outlined color="success">
+          Create
         </v-btn>
-
         <v-btn type="reset" class="ma-2" tile outlined color="warning">
-          <v-icon left>mdi-pencil</v-icon> Reset
+          Reset
         </v-btn>
       </v-container>
-
     </form>
   </validation-observer>
 </template>
@@ -61,9 +58,7 @@
     data: () => ({
       title: "",
       url: "",
-      // 選択肢
-      tag_items: ['Vue', 'Go', 'AWS'],
-      // 選択済み
+      tag_items: ['Vue', 'Go', 'Ruby', 'AWS'],
       tag: [],
       search: null,
     }),
@@ -76,7 +71,11 @@
         this.title = '';
         this.url = '';
         this.tag = [];
-        this.$refs.observer.reset();
+        // 使えなかった
+        // this.$nextTick(() => {
+        requestAnimationFrame(() => {
+          this.$refs.observer.reset();
+        });
       },
     },
   };

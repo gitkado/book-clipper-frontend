@@ -2,24 +2,27 @@
   <div>
     <h1>{{title}}</h1>
     <form-book />
-    <nuxt-link v-bind:to="back.to" >{{back.title}}</nuxt-link>
+    <nuxt-link v-bind:to="back.to" tag="span">
+      <v-btn class="mx-2" fab dark small color="teal">
+        <v-icon dark>mdi-format-list-bulleted-square</v-icon>
+      </v-btn>
+    </nuxt-link>
   </div>
 </template>
 
 <script>
-import FormBook from "@/components/FormBook.vue"
+import FormBook from "@/components/FormBook.vue";
 export default {
   data () {
     return {
       title: "MyBook-Add",
       back: {
-        title: "Back",
         to: "/books"
       }
-    }
+    };
   },
   components: {
     FormBook
   }
-}
+};
 </script>

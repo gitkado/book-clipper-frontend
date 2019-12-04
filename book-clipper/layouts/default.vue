@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -30,9 +30,9 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <router-link v-bind:to="title.to" tag="span">
+      <nuxt-link v-bind:to="title.to" tag="span">
         <v-toolbar-title v-text="title.title" />
-      </router-link>
+      </nuxt-link>
     </v-app-bar>
 
     <v-content>
