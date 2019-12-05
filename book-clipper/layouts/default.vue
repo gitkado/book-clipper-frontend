@@ -8,6 +8,15 @@
       app
     >
       <v-list>
+        <v-list-item>
+          <v-list-item-avatar color="grey darken-1">
+            <v-icon dark>{{user.icon}}</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title v-text="user.name"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -75,7 +84,7 @@ export default {
         to: '/'
       },
       user: {
-        icon: 'mdi-account-circle',
+        icon: 'mdi-account',
         name: 'None'
       }
     }
