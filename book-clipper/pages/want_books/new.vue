@@ -19,6 +19,8 @@ export default {
         title: "",
         url: "",
         tag: [],
+        is_book: false,
+        is_ebook: false,
         tag_items: ['Vue', 'Go', 'Ruby', 'AWS'],
         search: null,
       },

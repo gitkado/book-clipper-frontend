@@ -41,6 +41,16 @@
         </v-combobox>
       </validation-provider>
 
+      <v-row justify="space-around">
+        <validation-provider name="Book" rules="required" v-slot="{ invalid, errors }">
+          <v-switch v-model="form.is_book" class="mx-2" label="Book" color="indigo"></v-switch>
+        </validation-provider>
+  
+        <validation-provider name="e-Book" rules="required" v-slot="{ invalid, errors }">
+          <v-switch v-model="form.is_ebook" class="mx-2" label="e-Book" color="indigo"></v-switch>
+        </validation-provider>
+      </v-row>
+
       <v-container fluid>
         <v-btn type="reset" class="ma-2" tile outlined color="warning">
           Reset
