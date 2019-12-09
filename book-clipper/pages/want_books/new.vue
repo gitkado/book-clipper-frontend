@@ -15,27 +15,25 @@
 </template>
 
 <script>
-import FormBook from "@/components/FormBook.vue";
-export default {
-  data () {
-    return {
-      form: {
-        title: "",
-        url: "",
-        tag: [],
-        is_book: false,
-        is_ebook: false,
-        tag_items: ['Vue', 'Go', 'Ruby', 'AWS'],
-        search: null,
-      },
-      title: "WantBook-Add",
-      back: {
-        to: "/want_books"
-      }
-    };
-  },
-  components: {
-    FormBook
-  }
-};
+  import FormBook from '@/components/FormBook.vue';
+  export default {
+    data () {
+      return {
+        form: {
+          title: '',
+          url: '',
+          tag: [],
+          is_book: false,
+          is_ebook: false,
+        },
+        title: 'WantBook-Add',
+        back: {
+          to: '/want_books'
+        }
+      };
+    },
+    components: {
+      FormBook
+    }
+  };
 </script>

@@ -19,17 +19,11 @@
   export default {
     data () {
       return {
-        form: {
-          title: '',
-          url: '',
-          tag: [],
-          is_book: false,
-          is_ebook: false,
-        },
-        title: 'MyBook-Add',
+        title: 'MyBook-Edit',
         back: {
           to: '/books'
-        }
+        },
+        form: this.$route.params,
       };
     },
     components: {

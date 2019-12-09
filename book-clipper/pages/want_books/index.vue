@@ -14,14 +14,14 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: "WantBooks",
-      add: {
-        to: "/want_books/new"
-      }
-    };
-  }
-};
+  export default {
+    data () {
+      return {
+        title: 'WantBooks',
+        add: {
+          to: '/want_books/new'
+        }
+      };
+    }
+  };
 </script>

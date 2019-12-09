@@ -22,8 +22,8 @@
       <validation-provider name="Tag" v-slot="{ invalid, errors }">
         <v-combobox
           v-model="form.tag"
-          :items="form.tag_items"
-          :search-input.sync="form.search"
+          :items="tags.tag_items"
+          :search-input.sync="tags.search"
           hide-selected
           label="Tag"
           multiple
@@ -33,7 +33,7 @@
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>
-                  No results matching "<strong>{{ form.search }}</strong>". Press <kbd>enter</kbd> to create a new one
+                  No results matching "<strong>{{ tags.search }}</strong>". Press <kbd>enter</kbd> to create a new one
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -56,7 +56,7 @@
           Reset
         </v-btn>
         <v-btn :disabled="invalid" type="submit" class="ma-2" tile outlined color="success">
-          Create
+          Submit
         </v-btn>
       </v-container>
     </form>
@@ -65,6 +65,14 @@
 
 <script>
   export default {
+    data () {
+      return {
+        tags: {
+          tag_items: ['Vue', 'Go', 'Ruby', 'AWS'],
+          search: null,
+        },
+      };
+    },
     props: [
       'form'
     ],
