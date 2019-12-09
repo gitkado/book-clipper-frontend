@@ -17,19 +17,19 @@
               <v-icon v-if="item.is_book" class="ml-1">mdi-book-open-variant</v-icon>
               <v-icon v-if="item.is_ebook" class="ml-1">mdi-cloud-print-outline</v-icon>
             </v-card-title>
-    
-            <v-card-text v-if="item.tag.length > 0" class="pb-0">
+
+            <v-card-actions>
               <v-chip
-                class="ma-2"
+                class="mx-1"
+                v-if="item.tag.length > 0"
                 v-for="(tag, i) in item.tag"
                 :key="i"
               >
                 {{tag}}
               </v-chip>
-            </v-card-text>
-    
-            <v-card-actions>
+
               <v-spacer></v-spacer>
+
               <nuxt-link to="/books/edit" tag="span">
                 <v-btn icon>
                   <v-icon>mdi-pencil-outline</v-icon>
