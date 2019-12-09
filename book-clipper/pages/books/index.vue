@@ -7,74 +7,83 @@
         <v-col
           v-for="(item, i) in items"
           :key="i"
-          cols="6"
+          cols="5"
+          class="ma-1"
         >
-          <v-card>
-            <v-card-title>
-              <span class="mx-2">
-                {{item.title}}
-              </span>
-              <v-icon v-if="item.is_book" class="ml-1">mdi-book-open-variant</v-icon>
-              <v-icon v-if="item.is_ebook" class="ml-1">mdi-cloud-print-outline</v-icon>
-            </v-card-title>
-
-            <v-card-actions>
-              <v-chip
-                class="mx-1"
-                v-if="item.tag.length > 0"
-                v-for="(tag, i) in item.tag"
-                :key="i"
-              >
-                {{tag}}
-              </v-chip>
-
-              <v-spacer></v-spacer>
-
-              <nuxt-link to="/books/edit" tag="span">
-                <v-btn icon>
-                  <v-icon>mdi-pencil-outline</v-icon>
-                </v-btn>
-              </nuxt-link>
+          <v-hover>
+            <template v-slot="{ hover }">
+              <v-card :elevation="hover ? 8 : 4">
+                <v-card-title>
+                  <span class="mx-2">
+                    {{item.title}}
+                  </span>
+                  <v-icon v-if="item.is_book" class="ml-1">mdi-book-open-variant</v-icon>
+                  <v-icon v-if="item.is_ebook" class="ml-1">mdi-cloud-print-outline</v-icon>
+                </v-card-title>
     
-              <v-dialog v-model="dialog" persistent max-width="290">
-                <template v-slot:activator="{ on }">
-                  <v-btn icon v-on="on">
-                    <v-icon>mdi-delete-outline</v-icon>
+                <v-card-actions>
+                  <v-chip
+                    class="mx-1"
+                    v-if="item.tag.length > 0"
+                    v-for="(tag, i) in item.tag"
+                    :key="i"
+                  >
+                    {{tag}}
+                  </v-chip>
+    
+                  <v-spacer></v-spacer>
+    
+                  <nuxt-link to="/books/edit" tag="span">
+                    <v-btn icon>
+                      <v-icon>mdi-pencil-outline</v-icon>
+                    </v-btn>
+                  </nuxt-link>
+        
+                  <v-dialog v-model="dialog" persistent max-width="290">
+                    <template v-slot:activator="{ on }">
+                      <v-btn icon v-on="on">
+                        <v-icon>mdi-delete-outline</v-icon>
+                      </v-btn>
+                    </template>
+        
+                    <v-card>
+                      <v-card-title class="headline">Delete?</v-card-title>
+                      <v-card-text>{{item.title}}</v-card-text>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="error" text @click="dialog = false">Disagree</v-btn>
+                        <nuxt-link v-bind:to="add.to" tag="span">
+                          <v-btn color="success" text @click="dialog = true">Agree</v-btn>
+                        </nuxt-link>
+                      </v-card-actions>
+                    </v-card>
+                  </v-dialog>
+        
+                  <a v-if="item.url != ''" v-bind:href="item.url" target="_blank" style="text-decoration: none;">
+                    <v-btn icon>
+                      <v-icon>mdi-share</v-icon>
+                    </v-btn>
+                  </a>
+                  <v-btn v-else icon disabled class="ml-0">
+                    <v-icon>mdi-share-off</v-icon>
                   </v-btn>
-                </template>
-    
-                <v-card>
-                  <v-card-title class="headline">Delete?</v-card-title>
-                  <v-card-text>{{item.title}}</v-card-text>
-                  <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn color="error" text @click="dialog = false">Disagree</v-btn>
-                    <nuxt-link v-bind:to="add.to" tag="span">
-                      <v-btn color="success" text @click="dialog = true">Agree</v-btn>
-                    </nuxt-link>
-                  </v-card-actions>
-                </v-card>
-              </v-dialog>
-    
-              <a v-if="item.url != ''" v-bind:href="item.url" target="_blank" style="text-decoration: none;">
-                <v-btn icon>
-                  <v-icon>mdi-share</v-icon>
-                </v-btn>
-              </a>
-              <v-btn v-else icon disabled class="ml-0">
-                <v-icon>mdi-share-off</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
+                </v-card-actions>
+              </v-card>
+            </template>
+          </v-hover>
         </v-col>
       </v-row>
     </v-container>
-    
-    <nuxt-link v-bind:to="add.to" tag="span">
-      <v-btn class="ma-2" fab dark small color="indigo">
-        <v-icon dark>mdi-plus</v-icon>
-      </v-btn>
-    </nuxt-link>
+
+    <v-hover>
+      <template v-slot="{ hover }">
+        <nuxt-link v-bind:to="add.to" tag="span">
+          <v-btn class="ma-2" fab dark small color="indigo" :elevation="hover ? 8 : 2">
+            <v-icon dark>mdi-plus</v-icon>
+          </v-btn>
+        </nuxt-link>
+      </template>
+    </v-hover>
   </div>
 </template>
 
