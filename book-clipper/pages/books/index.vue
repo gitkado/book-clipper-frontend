@@ -7,8 +7,8 @@
         <v-col
           v-for="(item, i) in items"
           :key="i"
-          cols="5"
-          class="ma-1"
+          sm=6
+          cols=12
         >
           <v-hover>
             <template v-slot="{ hover }">

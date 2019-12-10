@@ -78,6 +78,7 @@
     ],
     methods: {
       onSubmit () {
+        // TODO: 初回登録と更新でsubmit処理が異なる
         alert('Form has been submitted!');
       },
       onReset () {
