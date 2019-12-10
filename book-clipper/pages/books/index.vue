@@ -92,6 +92,10 @@
     data () {
       return {
         title: 'MyBooks',
+        add: {
+          to: '/books/new'
+        },
+        dialog: false,
         items: [
           {
             title: 'Nuxtjsビギナーズガイド',
@@ -121,11 +125,7 @@
             is_book: true,
             is_ebook: true,
           }
-        ],
-        dialog: false,
-        add: {
-          to: '/books/new'
-        }
+        ]
       };
     }
   };
