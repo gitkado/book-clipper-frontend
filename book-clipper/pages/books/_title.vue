@@ -23,7 +23,14 @@
         back: {
           to: '/books'
         },
-        form: this.$route.params,
+        // TODO: データ取得APIをコールして値セットする
+        form: {
+          title: this.$route.params.title,
+          url: this.$route.params.url,
+          tag: this.$route.params.tag,
+          is_book: this.$route.params.is_book,
+          is_ebook: this.$route.params.is_ebook,
+        }
       };
     },
     components: {

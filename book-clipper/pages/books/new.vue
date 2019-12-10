@@ -19,16 +19,16 @@
   export default {
     data () {
       return {
+        title: 'MyBook-Add',
+        back: {
+          to: '/books'
+        },
         form: {
           title: '',
           url: '',
           tag: [],
           is_book: false,
           is_ebook: false,
-        },
-        title: 'MyBook-Add',
-        back: {
-          to: '/books'
         }
       };
     },
