@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    
+
     <v-container fluid>
       <v-row dense>
         <v-col
@@ -25,8 +25,8 @@
                   <v-chip
                     class="mx-1"
                     v-if="item.tag.length > 0"
-                    v-for="(tag, i) in item.tag"
-                    :key="i"
+                    v-for="tag in item.tag"
+                    :key="tag"
                   >
                     {{tag}}
                   </v-chip>
@@ -38,27 +38,27 @@
                       <v-icon>mdi-pencil-outline</v-icon>
                     </v-btn>
                   </nuxt-link>
-        
-                  <v-dialog v-model="dialog" persistent max-width="290">
+
+                  <v-dialog v-model="dialogs[i]" persistent max-width="290" :key="i">
                     <template v-slot:activator="{ on }">
                       <v-btn icon v-on="on">
                         <v-icon>mdi-delete-outline</v-icon>
                       </v-btn>
                     </template>
-        
+
                     <v-card>
                       <v-card-title class="headline">Delete?</v-card-title>
                       <v-card-text>{{item.title}}</v-card-text>
                       <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn color="error" text @click="dialog = false">Disagree</v-btn>
+                        <v-btn color="error" text @click="cancel(i)">Disagree</v-btn>
                         <nuxt-link v-bind:to="add.to" tag="span">
-                          <v-btn color="success" text @click="dialog = true">Agree</v-btn>
+                          <v-btn color="success" text @click="agree(i)">Agree</v-btn>
                         </nuxt-link>
                       </v-card-actions>
                     </v-card>
                   </v-dialog>
-        
+
                   <a v-if="item.url != ''" v-bind:href="item.url" target="_blank" style="text-decoration: none;">
                     <v-btn icon>
                       <v-icon>mdi-share</v-icon>
@@ -78,7 +78,7 @@
     <v-hover>
       <template v-slot="{ hover }">
         <nuxt-link v-bind:to="add.to" tag="span">
-          <v-btn class="ma-2" fab dark small color="indigo" :elevation="hover ? 8 : 2">
+          <v-btn class="ma-2" fab dark color="indigo" :elevation="hover ? 8 : 2">
             <v-icon dark>mdi-plus</v-icon>
           </v-btn>
         </nuxt-link>
@@ -95,7 +95,7 @@
         add: {
           to: '/books/new'
         },
-        dialog: false,
+        dialogs: {},
         items: [
           {
             title: 'Nuxtjsビギナーズガイド',
@@ -127,6 +127,14 @@
           }
         ]
       };
+    },
+    methods: {
+      agree(i) {
+        this.dialogs[i] = false;
+      },
+      cancel(i) {
+        this.dialogs[i] = false;
+      }
     }
   };
 </script>

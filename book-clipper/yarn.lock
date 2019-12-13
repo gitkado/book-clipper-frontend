@@ -3224,6 +3224,140 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+embed-js@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-js/-/embed-js-5.0.4.tgz#c164075ae4ff9cb27a48ea42d3fa5191727ff045"
+  integrity sha512-evMLjRGe7sDsJr0NqL5t0yAZm1sD0po7U82smmAsfuEz5jDYVe2yXI/R7uTvIJeyjV3C9VpQwGPYSmT80EI3HA==
+  dependencies:
+    is-dom "^1.0.9"
+    is-in-browser "1.1.3"
+    just-extend "4.0.2"
+    p-waterfall "^1.0.0"
+
+embed-plugin-base@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-base/-/embed-plugin-base-5.0.4.tgz#67f91e2a54e5514b7b4b629d51618f2976bf0be7"
+  integrity sha512-RNrGW/m+vrTG5iQ5yXQoIfw6aeiIGl+gO5jjVk5y134N1hm3QfhrEvQdyDqNjv6efe7XQWUi3t0KzuT7XT6LNg==
+  dependencies:
+    embed-plugin-utilities "^5.0.4"
+    just-extend "4.0.2"
+
+embed-plugin-emoji@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-emoji/-/embed-plugin-emoji-5.0.4.tgz#fd382402c21f0b5aa0b70c16c751c5997a5c86a5"
+  integrity sha512-MnMCYYpjnhVJ7oD5wzmHsPuaryvqNE3xENKdgusetry/F5Na6FoK3ZKTubJaebjmYEquqaq1ss9SosPAXtC9ew==
+  dependencies:
+    just-extend "4.0.2"
+    just-kebab-case "^1.0.0"
+    regex-emoji "^2.0.5"
+
+embed-plugin-facebook@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-facebook/-/embed-plugin-facebook-5.0.4.tgz#f13954a0e5cae5ad9f0ab39511e01f51016b830a"
+  integrity sha512-AdohKXcQOhxuaM8BXSnts0N3aEhUKyc+tNGPEM/JrHrT/2mo3TZRZ9wvsNoFcQandodWBB2CRKBn4nlryP9bew==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    just-extend "4.0.2"
+    just-kebab-case "^1.0.0"
+    regex-emoji "^2.0.5"
+
+embed-plugin-github@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-github/-/embed-plugin-github-5.0.4.tgz#fc93119b1f5868260fe328f6bf68d59846c17551"
+  integrity sha512-qOo8coXeRE/ghfa2N9oJFuYpnwt5Fr7du0KV80R2QSYd7SVzrv1wZoQcPb9VbmUTeFloWhFfDqoBsoi0dN87JQ==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    just-extend "4.0.2"
+
+embed-plugin-highlight@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-highlight/-/embed-plugin-highlight-5.0.4.tgz#55b890af40a202e13a113444813f305681f92569"
+  integrity sha512-hrUxgvzpMzECvvdxtN4tqgmyFEUdxh0kD0gySt8YyUh82QGhtpdNf6JGEHvMFVDkNzLvzo78lb8pbcHQsICxHg==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    is-in-browser "1.1.3"
+    just-extend "4.0.2"
+
+embed-plugin-instagram@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-instagram/-/embed-plugin-instagram-5.0.4.tgz#bfc360396517ed55b0808d70d5b26f55da16c631"
+  integrity sha512-q9RS1xDrj72dPnSG/Px++tkC8cxJBigJNY04EfQK7dX6NcODlLsqxm4mdppPOOkbIfWODPdvOfn9PhPtW+oLpg==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    just-extend "4.0.2"
+
+embed-plugin-map@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-map/-/embed-plugin-map-5.0.4.tgz#d9a784b0fb07735c279ecec2f38947f0449409b7"
+  integrity sha512-yrTqNkF2m4v43ZsKsckQP8Od0qwMHK+33iK69O3/zd6iCFeKVcYcLfUpCL9GBTBzCX/jE0J93PvRBJo64qNoDg==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    just-extend "4.0.2"
+
+embed-plugin-media@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-media/-/embed-plugin-media-5.0.4.tgz#a5ffe95bc3c7281140053d9cd7c932ed52ec23fe"
+  integrity sha512-WM989l6xVNwbp7x2dD6rnQ5MkgAr8KqhXR6XqHwv0xy0EFX+OW4UjVnTGMaUmkIsLdIjoEYlgIFBvPoJDF1W1Q==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    just-extend "4.0.2"
+
+embed-plugin-noembed@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-noembed/-/embed-plugin-noembed-5.0.4.tgz#fbce3a953c04daf6a89a129414564169843deb51"
+  integrity sha512-RcSjvSVywIULMqS8pqN/m+jFnJW1o/4fZ3VcK0OZIjG1x/PU2ibX99S2hi1Xbf4/+gzHnew3xqFb5Dx2TeM5ng==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    is-dom "1.0.9"
+    is-in-browser "1.1.3"
+    just-extend "4.0.2"
+    just-flatten-it "2.1.0"
+    just-pluck-it "1.2.0"
+
+embed-plugin-twitter@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-twitter/-/embed-plugin-twitter-5.0.4.tgz#c292738a44eec5265aedb1a1b8a7076c072dee92"
+  integrity sha512-oWAg70FCb887/Wqqu/UUWCEhHajXqazREGAhbT7EQmsyN5uGAEeWFeD9CB6rVu6LjRaKume+jv6F8d9ogUKFkg==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    fetch-jsonp "1.1.3"
+    is-dom "1.0.9"
+    is-in-browser "1.1.3"
+    just-extend "4.0.2"
+
+embed-plugin-url@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-url/-/embed-plugin-url-5.0.4.tgz#0e86fe4b7948a2072305c3b4e01c257a76da3672"
+  integrity sha512-jqB7ZEcRIkh81FJXGlWL6xm8BmDLngtgEvDV5Zxl2noezzf8XX/a60sN0Ar2vwlxbi1Lz45Meb12D5w8XRsH/Q==
+  dependencies:
+    html-linkify "1.2.2"
+    just-extend "4.0.2"
+
+embed-plugin-utilities@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-utilities/-/embed-plugin-utilities-5.0.4.tgz#a466972f48de12abb015388ca611fab6ae2009f1"
+  integrity sha512-A5mENQEpDHvedff5MSRFs+GO4t9UgqVDW33jAskg/CMcLUphCZbrUFiPuPDfoL3SI2Vbdte2AnDUaf5ReoD7SQ==
+  dependencies:
+    is-in-browser "1.1.3"
+    just-extend "4.0.2"
+    just-truncate "1.1.0"
+
+embed-plugin-youtube@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/embed-plugin-youtube/-/embed-plugin-youtube-5.0.4.tgz#dfe4e83cf618ea9423bc8e1cdf38578d650813ce"
+  integrity sha512-1H2ibPYKVXm/WIowL9AydyCphRCOPDizR15nWozsogJsMNfvGMY453lzqrq0HHgnWjBG92/zIadYST9y75j+rQ==
+  dependencies:
+    embed-plugin-base "^5.0.4"
+    embed-plugin-utilities "^5.0.4"
+    is-dom "1.0.9"
+    just-extend "4.0.2"
+    youtube-regex "1.0.5"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -3584,6 +3718,11 @@ fb-watchman@^2.0.0:
   integrity sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
   dependencies:
     bser "^2.0.0"
+
+fetch-jsonp@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/fetch-jsonp/-/fetch-jsonp-1.1.3.tgz#9eb9e585ba08aaf700563538d17bbebbcd5a3db2"
+  integrity sha1-nrnlhboIqvcAVjU40Xu+u81aPbI=
 
 fibers@^4.0.1:
   version "4.0.2"
@@ -4078,6 +4217,18 @@ html-entities@^1.2.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
   integrity sha1-DfKTUfByEWNRXfueVUPl9u7VFi8=
 
+html-escape@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/html-escape/-/html-escape-1.0.0.tgz#db2db5526a64c04a41c7677de3056c0d1381d465"
+  integrity sha1-2y21UmpkwEpBx2d94wVsDROB1GU=
+
+html-linkify@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/html-linkify/-/html-linkify-1.2.2.tgz#875f7d0773a793a5de6ae306b7ddf21ff2a3347b"
+  integrity sha1-h199B3Onk6XeauMGt93yH/KjNHs=
+  dependencies:
+    html-escape "1.0.0"
+
 html-minifier@^3.2.3:
   version "3.5.21"
   resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.21.tgz#d0040e054730e354db008463593194015212d20c"
@@ -4420,6 +4571,19 @@ is-directory@^0.3.1:
   resolved "https://registry.yarnpkg.com/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
   integrity sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
 
+is-dom@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/is-dom/-/is-dom-1.0.9.tgz#483832d52972073de12b9fe3f60320870da8370d"
+  integrity sha1-SDgy1SlyBz3hK5/j9gMghw2oNw0=
+
+is-dom@^1.0.9:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-dom/-/is-dom-1.1.0.tgz#af1fced292742443bb59ca3f76ab5e80907b4e8a"
+  integrity sha512-u82f6mvhYxRPKpw8V1N0W8ce1xXwOrQtgGcxl6UCL5zBmZu3is/18K0rR7uFCnMDuAsS/3W54mGL4vsaFUQlEQ==
+  dependencies:
+    is-object "^1.0.1"
+    is-window "^1.0.2"
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -4473,6 +4637,11 @@ is-glob@^4.0.0, is-glob@^4.0.1, is-glob@~4.0.1:
   dependencies:
     is-extglob "^2.1.1"
 
+is-in-browser@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/is-in-browser/-/is-in-browser-1.1.3.tgz#56ff4db683a078c6082eb95dad7dc62e1d04f835"
+  integrity sha1-Vv9NtoOgeMYILrldrX3GLh0E+DU=
+
 is-number@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-3.0.0.tgz#24fd6201a4782cf50561c810276afc7d12d71195"
@@ -4489,6 +4658,11 @@ is-obj@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
   integrity sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
+
+is-object@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-object/-/is-object-1.0.1.tgz#8952688c5ec2ffd6b03ecc85e769e02903083470"
+  integrity sha1-iVJojF7C/9awPsyF52ngKQMINHA=
 
 is-plain-obj@^1.0.0:
   version "1.1.0"
@@ -4552,6 +4726,11 @@ is-whitespace@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/is-whitespace/-/is-whitespace-0.3.0.tgz#1639ecb1be036aec69a54cbb401cfbed7114ab7f"
   integrity sha1-Fjnssb4DauxppUy7QBz77XEUq38=
+
+is-window@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-window/-/is-window-1.0.2.tgz#2c896ca53db97de45d3c33133a65d8c9f563480d"
+  integrity sha1-LIlspT25feRdPDMTOmXYyfVjSA0=
 
 is-windows@^1.0.2:
   version "1.0.2"
@@ -5120,6 +5299,31 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+just-extend@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-4.0.2.tgz#f3f47f7dfca0f989c55410a7ebc8854b07108afc"
+  integrity sha512-FrLwOgm+iXrPV+5zDU6Jqu4gCRXbWEQg2O3SKONsWE4w7AXFRkryS53bpWdaL9cNol+AmR3AEYz6kn+o0fCPnw==
+
+just-flatten-it@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/just-flatten-it/-/just-flatten-it-2.1.0.tgz#2514337cc77ee3462869fee3d939b06ec1fd7986"
+  integrity sha512-mX3NUt/LF6EzohLJZXhywCwz2zqdhx6wVkEu6UfUx00lVQlSB6SBV1O+/Le15NfsimrWRD82H69ZkSVQZffhmw==
+
+just-kebab-case@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/just-kebab-case/-/just-kebab-case-1.1.0.tgz#ebe854fde84b0afa4e597fcd870b12eb3c026755"
+  integrity sha512-QkuwuBMQ9BQHMUEkAtIA4INLrkmnnveqlFB1oFi09gbU0wBdZo6tTnyxNWMR84zHxBuwK7GLAwqN8nrvVxOLTA==
+
+just-pluck-it@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/just-pluck-it/-/just-pluck-it-1.2.0.tgz#dad55ec91c2aae6984744884c412e016ec6c1fb4"
+  integrity sha512-iDzNYZdBBr2Wkw8zrGFJvNfcvat1Mh1o7qxpJpQA829z0ZRvTTqWzL9+O2r+kODXMZb0KeTuqCW0kgaLyQVBPg==
+
+just-truncate@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/just-truncate/-/just-truncate-1.1.0.tgz#59c848a9a2359226d43655fbe797613e027c58fd"
+  integrity sha512-s6ESoBb9mcUKUfse/czFS1BGwUQWsg9t8+zE2898xLM/MLriKR3sjml4C1HKpcKcOIJ358PaIpGXGP1c727IOQ==
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -6098,6 +6302,13 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+p-waterfall@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-waterfall/-/p-waterfall-1.0.0.tgz#7ed94b3ceb3332782353af6aae11aa9fc235bb00"
+  integrity sha1-ftlLPOszMngjU69qrhGqn8I1uwA=
+  dependencies:
+    p-reduce "^1.0.0"
 
 pako@~1.0.5:
   version "1.0.10"
@@ -7267,6 +7478,11 @@ regenerator-transform@^0.14.0:
   integrity sha512-flVuee02C3FKRISbxhXl9mGzdbWUVHubl1SMaknjxkFB1/iqpJhArQUvRxOOPEc/9tAiX0BaQ28FJH10E4isSQ==
   dependencies:
     private "^0.1.6"
+
+regex-emoji@^2.0.5:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/regex-emoji/-/regex-emoji-2.0.7.tgz#8139f721b6bbb1a6efe469c6437cd42d206f7be0"
+  integrity sha512-4CJlck3IV35A/plRqCcCe9VO8rcqxNb8Ut0h9ehV7hop41tHJgAE9mMM0r+jgJg71bAXKz9tiedrO5NV4elwmw==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
@@ -8583,6 +8799,11 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
+uuid@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
+  integrity sha512-DIWtzUkw04M4k3bf1IcpS2tngXEL26YUD2M0tMDUpnUrz2hgzUBlD55a4FjdLGPvfHxS6uluGWvaVEqgBcVa+g==
+
 uuid@^3.3.2:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
@@ -8629,6 +8850,31 @@ vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
+
+vue-embed@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-embed/-/vue-embed-2.1.0.tgz#c58d35f28f1611e32ef4e3cea7394f4791b8396b"
+  integrity sha512-moo4RX6GKv0Yx2z/TiHtS7IilFebTbUCUlGA38EZ4IPGZggMPpmuN2D8aX28DAXEAmVsZhj9444QKe2GpefmKA==
+  dependencies:
+    embed-js "^5.0.4"
+    embed-plugin-emoji "^5.0.4"
+    embed-plugin-facebook "^5.0.4"
+    embed-plugin-github "^5.0.4"
+    embed-plugin-highlight "^5.0.4"
+    embed-plugin-instagram "^5.0.4"
+    embed-plugin-map "^5.0.4"
+    embed-plugin-media "^5.0.4"
+    embed-plugin-noembed "^5.0.4"
+    embed-plugin-twitter "^5.0.4"
+    embed-plugin-url "^5.0.4"
+    embed-plugin-youtube "^5.0.4"
+
+vue-friendly-iframe@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/vue-friendly-iframe/-/vue-friendly-iframe-0.16.0.tgz#d11e4ab5602132d916d95841401c09f0aab627db"
+  integrity sha512-DrHeGcvGxboROanvRR4qJ0i+UST76H3ZqrRVB2gZ+kvF7knSqHHDRixOXYZ9ObZ1dSsBzDCzr6bGg01WSQG5Dg==
+  dependencies:
+    uuid "3.1.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
@@ -9087,3 +9333,8 @@ yargs@^13.3.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.1"
+
+youtube-regex@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/youtube-regex/-/youtube-regex-1.0.5.tgz#5f27facab0b7d66d01eebc7afc9a6a69cf61abd8"
+  integrity sha1-Xyf6yrC31m0B7rx6/Jpqac9hq9g=
