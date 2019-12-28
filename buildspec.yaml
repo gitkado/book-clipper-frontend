@@ -5,10 +5,8 @@ phases:
       docker: 18
   build:
     commands:
-      - ls -al
-      - pwd
-      - whoami
-      - docker-compose run --rm front yarn run generate
+      - which docker-compose
+      - sudo /usr/local/bin/docker-compose run --rm front yarn run generate
   post_build:
     commands:
       - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME —-delete
