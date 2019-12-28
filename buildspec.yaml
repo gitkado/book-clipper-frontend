@@ -8,11 +8,11 @@ phases:
       # - yarn global add @vue/cli
       # - yarn add vee-validate
       # - yarn install
-      - docker-compose build --no-cache
+      - sudo docker-compose build --no-cache
   build:
     commands:
       # - yarn run generate
-      - docker-compose run --rm front yarn run generate
+      - sudo docker-compose run --rm front yarn run generate
   post_build:
     commands:
       - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME —delete
