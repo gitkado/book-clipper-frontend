@@ -5,7 +5,6 @@ phases:
       docker: 18
   build:
     commands:
-      - which docker-compose
       - sudo /usr/local/bin/docker-compose run --rm front yarn run generate
   post_build:
     commands:
