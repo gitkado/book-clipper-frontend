@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      # - npm install -g yarn
+      # - yarn global add @vue/cli
+      # - yarn add vee-validate
+      # - yarn install
+      - docker-compose build --no-cache
+  build:
+    commands:
+      # - yarn run generate
+      - docker-compose run --rm front yarn run generate
+  post_build:
+    commands:
+      - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME —delete
