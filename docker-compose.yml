@@ -7,5 +7,5 @@ services:
       - "$PWD:/opt/app"
     ports:
       - "8080:3000"
+    # command: "yarn dev"
     # command: "/bin/sh"
-    # command: "yarn start"

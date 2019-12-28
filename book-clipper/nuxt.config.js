@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'spa',
@@ -30,6 +30,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // { src: '~/plugins/vee-validate', ssr: false },
+    '~/plugins/vee-validate',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,7 +51,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -67,14 +69,17 @@ export default {
   ** Build configuration
   */
   build: {
+    transpile: [
+      'vee-validate/dist/rules'
+    ],
     /*
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
   },
   /*
-  ** Server configuration - add
+  ** Server configuration
   */
   server: {
     // default: 3000

@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -8,6 +8,15 @@
       app
     >
       <v-list>
+        <v-list-item>
+          <v-list-item-avatar color="grey darken-1">
+            <v-icon dark>{{user.icon}}</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title v-text="user.name"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -30,9 +39,9 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <router-link v-bind:to="title.to" tag="span">
+      <nuxt-link v-bind:to="title.to" tag="span">
         <v-toolbar-title v-text="title.title" />
-      </router-link>
+      </nuxt-link>
     </v-app-bar>
 
     <v-content>
@@ -73,6 +82,10 @@ export default {
       title: {
         title: 'BookClipper',
         to: '/'
+      },
+      user: {
+        icon: 'mdi-account',
+        name: 'None'
       }
     }
   }

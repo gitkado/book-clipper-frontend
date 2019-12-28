@@ -5,7 +5,11 @@
 
 ## Framework
 - Nuxt.js
-- Vuetify
+- Vuetify.js
+
+## Deploy
+- Amazon S3
+- CodeBuild
 
 ## Run
 
