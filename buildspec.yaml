@@ -5,7 +5,9 @@ phases:
       docker: 18
   build:
     commands:
-      - sudo /usr/local/bin/docker-compose run --rm front yarn run generate
+      # - sudo /usr/local/bin/docker-compose run --rm front yarn run generate
+      - docker build . -t book-clipper-front
+      - docker run -it --rm -v $PWD:/opt/app book-clipper-front:latest yarn run generate
   post_build:
     commands:
-      - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME —-delete
+      - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME --delete
