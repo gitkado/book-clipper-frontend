@@ -6,8 +6,7 @@ phases:
   build:
     commands:
       - docker-compose build --no-cache
-      - docker-compose run --rm front yarn run generate
+      - docker-compose run --rm front /build.sh
   post_build:
     commands:
-      - ls -al book-clipper
       - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME --delete
