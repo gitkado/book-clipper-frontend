@@ -10,4 +10,4 @@ phases:
   post_build:
     commands:
       - aws s3 sync book-clipper/dist/ s3://$DEPLOY_BUCKET_NAME --delete
-      # - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+      # - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID
