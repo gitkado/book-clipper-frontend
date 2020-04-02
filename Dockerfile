@@ -11,6 +11,8 @@ ADD ./start.sh /
 RUN npm install -g yarn && \
     yarn global add @vue/cli && \
     yarn add vee-validate && \
+    yarn add @nuxtjs/axios && \
+    yarn add @nuxtjs/proxy && \
     chmod +x /build.sh && \
     chmod +x /start.sh && \
     yarn install && \

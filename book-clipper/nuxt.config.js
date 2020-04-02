@@ -43,7 +43,21 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
+  axios: {
+    proxy: true
+  },
+  // TODO: 本番環境のURLをどうやって隠すか(一旦GithubはPrivateに変更)
+  proxy: {
+    '/Prod/books': {
+      target: 'https://oyomjl6zwh.execute-api.ap-northeast-1.amazonaws.com',
+      pathRewrite: {
+        '^/Prod/books/': '/Prod/books/'
+      }
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -82,9 +96,7 @@ export default {
   ** Server configuration
   */
   server: {
-    // default: 3000
     port: 3000,
-    // default: localhost
     host: '0.0.0.0'
   }
 }
