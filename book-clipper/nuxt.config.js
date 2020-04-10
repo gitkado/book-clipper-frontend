@@ -49,10 +49,9 @@ export default {
   axios: {
     proxy: true
   },
-  // TODO: 本番環境のURLをどうやって隠すか(一旦GithubはPrivateに変更)
   proxy: {
     '/Prod/books': {
-      target: 'https://oyomjl6zwh.execute-api.ap-northeast-1.amazonaws.com',
+      target: process.env.API_BASE_URL || 'http://localhost:8888',
       pathRewrite: {
         '^/Prod/books/': '/Prod/books/'
       }
