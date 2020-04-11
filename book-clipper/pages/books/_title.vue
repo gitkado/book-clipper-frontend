@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
+    <v-card>
+      <v-card-title class="font-weight-bold">{{title}}</v-card-title>
+    </v-card>
+
     <form-book :form="form" />
     <v-hover>
       <template v-slot="{ hover }">
