@@ -34,10 +34,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      :clipped-left="clipped"
-      app
-    >
+    <v-app-bar :clipped-left="clipped" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <nuxt-link v-bind:to="title.to" tag="span">
         <v-toolbar-title v-text="title.title" />
@@ -45,49 +42,52 @@
     </v-app-bar>
 
     <v-content>
+      <success-message />
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
 
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019 - gitkado</span>
+    <v-footer :fixed="fixed" app>
+      <span>&copy; 2020 - gitkado</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-note-multiple',
-          title: 'Books',
-          to: '/books'
+  import SuccessMessage from '@/components/TheSuccessMessage.vue';
+
+  export default {
+    data () {
+      return {
+        clipped: false,
+        drawer: false,
+        fixed: false,
+        items: [
+          {
+            icon: 'mdi-note-multiple',
+            title: 'Books',
+            to: '/books'
+          },
+          {
+            icon: 'mdi-note-multiple-outline',
+            title: 'WantBooks',
+            to: '/want_books'
+          }
+        ],
+        miniVariant: false,
+        title: {
+          title: 'BookClipper',
+          to: '/'
         },
-        {
-          icon: 'mdi-note-multiple-outline',
-          title: 'WantBooks',
-          to: '/want_books'
+        user: {
+          icon: 'mdi-account',
+          name: 'None'
         }
-      ],
-      miniVariant: false,
-      title: {
-        title: 'BookClipper',
-        to: '/'
-      },
-      user: {
-        icon: 'mdi-account',
-        name: 'None'
       }
+    },
+    components: {
+      SuccessMessage
     }
   }
-}
 </script>

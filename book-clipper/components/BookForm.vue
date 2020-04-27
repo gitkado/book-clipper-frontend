@@ -65,7 +65,6 @@
 
 <script>
   import axios from 'axios'
-  // TODO: inputやbtnをコンポーネントにできてない
 
   export default {
     data () {
@@ -89,7 +88,7 @@
           })
           .then(response => {
             if (response.status === 200) {
-              // TODO: メッセージ表示
+              this.$store.dispatch('message/flashSuccessMessage', 'Book created !');
               this.$router.push('/books');
             } else {
               throw new Error('レスポンスエラー');
