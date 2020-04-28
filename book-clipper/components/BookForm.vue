@@ -81,19 +81,33 @@
     ],
     methods: {
       onSubmit () {
-        // TODO: 初回登録と更新でsubmit処理が異なる
-        return axios
-          .post("/Prod/books", {
-            book: this.form
-          })
-          .then(response => {
-            if (response.status === 200) {
-              this.$store.dispatch('message/flashSuccessMessage', 'Book created !');
-              this.$router.push('/books');
-            } else {
-              throw new Error('レスポンスエラー');
-            }
-          });
+        if (typeof this.form.created_at === 'undefined') {
+          return axios
+            .post("/Prod/books", {
+              book: this.form
+            })
+            .then(response => {
+              if (response.status === 200) {
+                this.$store.dispatch('message/flashSuccessMessage', 'Book created !');
+                this.$router.push('/books');
+              } else {
+                throw new Error('レスポンスエラー');
+              }
+            });
+        } else {
+          return axios
+            .put(`/Prod/books/${this.form.created_at}`, {
+              book: this.form
+            })
+            .then(response => {
+              if (response.status === 200) {
+                this.$store.dispatch('message/flashSuccessMessage', 'Book updated !');
+                this.$router.push('/books');
+              } else {
+                throw new Error('レスポンスエラー');
+              }
+            });
+        }
       },
       onReset () {
         this.form.title = '';
