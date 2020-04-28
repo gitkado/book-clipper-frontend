@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="{name: 'books-title', params: item }" tag="span">
+  <nuxt-link :to="{name: 'books-created_at', params: {created_at: item}}" tag="span">
     <v-btn icon>
       <v-icon>mdi-pencil-outline</v-icon>
     </v-btn>

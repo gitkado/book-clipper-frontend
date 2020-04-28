@@ -16,7 +16,7 @@
               <v-card-actions>
                 <tag-chip :tags="item.tag" />
                 <v-spacer></v-spacer>
-                <edit-icon :item="item" />
+                <edit-icon :item="item.created_at" />
                 <delete-icon :item="item" :add="add" :i="i" />
                 <share-icon :item="item" />
               </v-card-actions>
