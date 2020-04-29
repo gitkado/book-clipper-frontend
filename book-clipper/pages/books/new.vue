@@ -1,21 +1,16 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <form-book :form="form" />
-    <v-hover>
-      <template v-slot="{ hover }">
-        <nuxt-link v-bind:to="back.to" tag="span">
-          <v-btn class="mx-2" fab dark small color="teal" :elevation="hover ? 8 : 2">
-            <v-icon dark>mdi-format-list-bulleted-square</v-icon>
-          </v-btn>
-        </nuxt-link>
-      </template>
-    </v-hover>
+    <page-title :title="title" />
+    <book-form :form="form" />
+    <back-button :back="back" />
   </div>
 </template>
 
 <script>
-  import FormBook from '@/components/FormBook.vue';
+  import PageTitle from '@/components/ThePageTitle.vue';
+  import BookForm from '@/components/BookForm.vue';
+  import BackButton from '@/components/BaseBackButton.vue';
+
   export default {
     data () {
       return {
@@ -33,7 +28,9 @@
       };
     },
     components: {
-      FormBook
+      PageTitle,
+      BookForm,
+      BackButton
     }
   };
 </script>
