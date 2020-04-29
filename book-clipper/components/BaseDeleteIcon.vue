@@ -11,34 +11,34 @@
       <v-card-text>{{item.title}}</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="error" text @click="cancel(i)">Disagree</v-btn>
-        <nuxt-link v-bind:to="add.to" tag="span">
+        <nuxt-link to="/books" tag="span">
           <v-btn color="success" text @click="agree(i)">Agree</v-btn>
         </nuxt-link>
+        <v-btn color="error" text @click="cancel(i)">Disagree</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        dialogs: {},
-      };
-    },
-    props: [
-      'add',
-      'item',
-      'i'
-    ],
-    methods: {
-      agree(i) {
-        this.dialogs[i] = false;
-      },
-      cancel(i) {
-        this.dialogs[i] = false;
-      }
+export default {
+  data () {
+    return {
+      dialogs: {},
     }
-  };
+  },
+  props: [
+    'item',
+    'i'
+  ],
+  methods: {
+    agree(i) {
+      this.$store.dispatch('book/deleteBooks', this.item.created_at, i)
+      this.dialogs[i] = false
+    },
+    cancel(i) {
+      this.dialogs[i] = false
+    }
+  }
+};
 </script>

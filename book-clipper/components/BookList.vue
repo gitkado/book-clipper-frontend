@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row dense>
-      <v-col v-for="(item, i) in items" :key="i" sm=6 cols=12>
+      <v-col v-for="(item, i) in books" :key="i" sm=6 cols=12>
         <v-hover>
           <template v-slot="{ hover }">
             <v-card :elevation="hover ? 8 : 4">
@@ -17,7 +17,7 @@
                 <tag-chip :tags="item.tag" />
                 <v-spacer></v-spacer>
                 <edit-icon :item="item.created_at" />
-                <delete-icon :item="item" :add="add" :i="i" />
+                <delete-icon :item="item" :i="i" />
                 <share-icon :item="item" />
               </v-card-actions>
             </v-card>
@@ -29,25 +29,26 @@
 </template>
 
 <script>
-  import IsBookIcon from '@/components/BaseIsBookIcon.vue';
-  import IsEbookIcon from '@/components/BaseIsEbookIcon.vue';
-  import TagChip from '@/components/BaseTagChip.vue';
-  import EditIcon from '@/components/BaseEditIcon.vue';
-  import DeleteIcon from '@/components/BaseDeleteIcon.vue';
-  import ShareIcon from '@/components/BaseShareIcon.vue';
+import { mapState } from 'vuex'
 
-  export default {
-    props: [
-      'add',
-      'items'
-    ],
-    components: {
-      IsBookIcon,
-      IsEbookIcon,
-      TagChip,
-      EditIcon,
-      DeleteIcon,
-      ShareIcon
-    }
-  };
+import IsBookIcon from '@/components/BaseIsBookIcon.vue';
+import IsEbookIcon from '@/components/BaseIsEbookIcon.vue';
+import TagChip from '@/components/BaseTagChip.vue';
+import EditIcon from '@/components/BaseEditIcon.vue';
+import DeleteIcon from '@/components/BaseDeleteIcon.vue';
+import ShareIcon from '@/components/BaseShareIcon.vue';
+
+export default {
+  computed: {
+    ...mapState('book', ['books'])
+  },
+  components: {
+    IsBookIcon,
+    IsEbookIcon,
+    TagChip,
+    EditIcon,
+    DeleteIcon,
+    ShareIcon
+  }
+};
 </script>
