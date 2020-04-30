@@ -6,17 +6,22 @@ WORKDIR $APP_PATH
 
 ADD . /opt/app
 ADD ./build.sh /
+ADD ./entrypoint.sh /
 ADD ./start.sh /
 
 RUN npm install -g yarn && \
     yarn global add @vue/cli && \
     yarn add vee-validate && \
     yarn add @nuxtjs/axios && \
+    yarn add @nuxtjs/dotenv && \
     yarn add @nuxtjs/proxy && \
     chmod +x /build.sh && \
+    chmod +x /entrypoint.sh && \
     chmod +x /start.sh && \
     yarn install && \
     yarn build
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/start.sh"]
 
