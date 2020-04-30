@@ -53,7 +53,8 @@ export default {
   },
   proxy: {
     '/Prod/books': {
-      target: process.env.API_BASE_URL || 'http://localhost:8888',
+      target: 'https://oyomjl6zwh.execute-api.ap-northeast-1.amazonaws.com',
+      // target: process.env.API_BASE_URL,
       pathRewrite: {
         '^/Prod/books/': '/Prod/books/'
       }
