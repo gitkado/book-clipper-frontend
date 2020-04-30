@@ -52,13 +52,7 @@ export default {
     proxy: true
   },
   proxy: {
-    '/Prod/books': {
-      target: 'https://oyomjl6zwh.execute-api.ap-northeast-1.amazonaws.com',
-      // target: process.env.API_BASE_URL,
-      pathRewrite: {
-        '^/Prod/books/': '/Prod/books/'
-      }
-    }
+    '/Prod': process.env.API_BASE_URL,
   },
   /*
   ** vuetify module configuration
@@ -92,7 +86,8 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    },
+      config.performance.maxAssetSize = 500000;
+    }
   },
   /*
   ** Server configuration

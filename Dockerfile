@@ -19,7 +19,7 @@ RUN npm install -g yarn && \
     chmod +x /entrypoint.sh && \
     chmod +x /start.sh && \
     yarn install && \
-    yarn build
+    yarn run build
 
 ENTRYPOINT ["/entrypoint.sh"]
 

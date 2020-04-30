@@ -1,5 +1,5 @@
 #!/bin/bash
 
 yarn install
-yarn build
-yarn start
+yarn run build
+yarn run start
